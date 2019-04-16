@@ -1,0 +1,176 @@
+.landing-header {
+    z-index: 1;
+    opacity: 0;
+    position: relative;
+    /* text-align: center; */
+    margin-top: 90vh;
+    animation: 1s slidefade 1s forwards;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+.skincare-tab {
+    background-color: #de7066;
+    color: #fff;
+    margin-top: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 4px; 
+}
+a.skincare-tab:hover {
+    color: rgba(68, 61, 61, 0.582);
+}
+
+
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin-top: 40vh;
+    }
+}
+
+
+
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 30px;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 20s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+    background-image: url('../img/gritandpolish-slider.jpg');
+}
+
+.slideshow li:nth-child(2) {
+    background-image: url('../img/gritandpolish-slider-1.jpg');
+    animation-delay: 5s;
+}
+
+.slideshow li:nth-child(3) {
+    background-image: url('../img/gritandpolish-slider-2.jpg');
+    animation-delay: 10s;
+}
+
+.slideshow li:nth-child(4) {
+    background-image: url('../img/gritandpolish-slider-3.jpg');
+    animation-delay: 15s;
+}
+
+.carousel-item {
+    /* transition: transform 3s ease,
+    opacity, 2s ease-out; */
+    /* animation: imageAnimation 20s linear infinite */
+}
+/*
+.slideshow li:nth-child(5) { 
+  background-image: url('../img/nefer.jpg');
+  animation-delay: 40s; 
+}
+*/
+
+/*SLIDESHOW 2*/
+
+.slideshow2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* 
+.slideshow2 li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 20s linear infinite;
+} */
+
+.slideshow2 li:nth-child(1) {
+    background-image: url('../img/nefertiti2.jpg');
+}
+
+.slideshow2 li:nth-child(2) {
+    background-image: url('../img/banner3.jpg');
+    animation-delay: 5s;
+}
+
+.slideshow2 li:nth-child(3) {
+    background-image: url('../img/slider4.jpg');
+    animation-delay: 10s;
+}
+
+.slideshow2 li:nth-child(4) {
+    background-image: url('../img/salon.jpg');
+    animation-delay: 15s;
+}
+
+/*END SLIDESHOW2*/
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+    15% {
+        opacity: 0.5;
+       
+    }
+    30% {
+        opacity: 1;
+        
+    }
+    50% {
+        opacity: 1;
+        
+         
+    }
+    85% {
+        opacity: 0.5;
+        
+    }
+    100% {
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+        
+         
+    }
+}
+
+/* Older browser support - class added by modernizr */
+
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
